@@ -55,6 +55,7 @@
             // 
             // buttonAngebotAnnehmen
             // 
+            this.buttonAngebotAnnehmen.Enabled = false;
             this.buttonAngebotAnnehmen.Location = new System.Drawing.Point(789, 533);
             this.buttonAngebotAnnehmen.Name = "buttonAngebotAnnehmen";
             this.buttonAngebotAnnehmen.Size = new System.Drawing.Size(124, 23);
