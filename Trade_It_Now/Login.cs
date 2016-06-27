@@ -29,16 +29,18 @@ namespace Trade_It_Now
         }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+
             kunden = dto.GetAlleKunden();
             Kunde k = new Kunde(textBoxName.Text, textBoxPW.Text);
             int index = kunden.IndexOf(k);
             if (kunden[index].Passwort.Equals(textBoxPW.Text))
             {
                 main.verbunden();
+                this.Dispose();
             }
-            this.Dispose();
+            
         }
-
+        
         private void buttonRegistrieren_Click(object sender, EventArgs e)
         {
            Registrieren r1 =  new Registrieren();
@@ -46,6 +48,5 @@ namespace Trade_It_Now
 
         }
 
-        
     }
 }
