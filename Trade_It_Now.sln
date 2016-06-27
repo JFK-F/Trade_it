@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trade_It_Now", "Trade_It_No
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlassenDLL", "KlassenDLL\KlassenDLL.csproj", "{18B9A2FC-96CB-4238-8E04-C7F117DE4772}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataDLL", "DataDLL\DataDLL.csproj", "{8540BBB3-97F6-484C-9EA4-5C5B3E7074A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatenDLL", "DatenDLL\DatenDLL.csproj", "{49762735-F800-4E86-A844-AE6084C8B8C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{18B9A2FC-96CB-4238-8E04-C7F117DE4772}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18B9A2FC-96CB-4238-8E04-C7F117DE4772}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18B9A2FC-96CB-4238-8E04-C7F117DE4772}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8540BBB3-97F6-484C-9EA4-5C5B3E7074A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8540BBB3-97F6-484C-9EA4-5C5B3E7074A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8540BBB3-97F6-484C-9EA4-5C5B3E7074A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8540BBB3-97F6-484C-9EA4-5C5B3E7074A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49762735-F800-4E86-A844-AE6084C8B8C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49762735-F800-4E86-A844-AE6084C8B8C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49762735-F800-4E86-A844-AE6084C8B8C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49762735-F800-4E86-A844-AE6084C8B8C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
