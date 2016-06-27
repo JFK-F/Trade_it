@@ -118,6 +118,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DatenDLL\DatenDLL.csproj">
+      <Project>{49762735-f800-4e86-a844-ae6084c8b8c2}</Project>
+      <Name>DatenDLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\KlassenDLL\KlassenDLL.csproj">
       <Project>{18b9a2fc-96cb-4238-8e04-c7f117de4772}</Project>
       <Name>KlassenDLL</Name>

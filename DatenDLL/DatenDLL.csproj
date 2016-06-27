@@ -43,6 +43,12 @@
     <Compile Include="DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KlassenDLL\KlassenDLL.csproj">
+      <Project>{18b9a2fc-96cb-4238-8e04-c7f117de4772}</Project>
+      <Name>KlassenDLL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
