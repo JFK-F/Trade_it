@@ -83,6 +83,10 @@ namespace KlassenDLL
             this.Plz = plz;
             this.Straße = strasse;   
         }
+        public Kunde (String name,String pw){
+            this.Benutzername = name;
+            this.passwort = pw;
+        }
 
         public Kunde()
         {
