@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KlassenDLL;
-using DataDLL;
+using DatenDLL;
 
 namespace Trade_It_Now
 {
