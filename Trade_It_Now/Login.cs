@@ -8,17 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KlassenDLL;
-
+using DataDLL;
 
 namespace Trade_It_Now
 {
     public partial class Login : Form
     {
+        DTO dto;
         List<Kunde> kunden;
         MDIParent1 main;
         public Login()
         {
             InitializeComponent();
+            dto = new DTO();
             this.Visible = true;
         }
         public Login(MDIParent1 main):this()
@@ -27,15 +29,14 @@ namespace Trade_It_Now
         }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            main.verbunden();
-            prüfen(textBoxName.Text,textBoxPW.Text);
-
+            kunden = dto.GetAlleKunden();
+            Kunde k = new Kunde(textBoxName.Text, textBoxPW.Text);
+            int index = kunden.IndexOf(k);
+            if (kunden[index].Passwort.Equals(textBoxPW.Text))
+            {
+                main.verbunden();
+            }
             this.Dispose();
-        }
-
-        private void prüfen()
-        {
-            throw new NotImplementedException();
         }
 
         private void buttonRegistrieren_Click(object sender, EventArgs e)
@@ -45,9 +46,6 @@ namespace Trade_It_Now
 
         }
 
-        private void prüfen(string bn , String pw)
-        {
-                //Prüfen des passwortes   
-        }
+        
     }
 }
