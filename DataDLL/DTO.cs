@@ -15,7 +15,7 @@ namespace DataDLL
         {
             OleDbConnectionStringBuilder bld = new OleDbConnectionStringBuilder();
             bld.Provider = "Microsoft.ACE.OLEDB.12.0";
-            bld.DataSource = "";
+            bld.DataSource = "H:\\2.jahr\\C#\\Trade_It_Now\\Tauschportal.accsb";
             con = new OleDbConnection(bld.ConnectionString);
 
         }
