@@ -22,6 +22,7 @@ namespace Trade_It_Now
         internal void verbunden()
         {
             artikelAnlegenToolStripMenuItem.Enabled = true;
+            anfragenToolStripMenuItem.Enabled = true;
         }
 
         private void MDIParent1_Load(object sender, EventArgs e)
@@ -34,6 +35,12 @@ namespace Trade_It_Now
         {
             Artikelanlegen f1 = new Artikelanlegen(this);
             f1.MdiParent = this;
+        }
+
+        private void anfragenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           Übersicht üs = new Übersicht();
+           üs.MdiParent = this;
         }
         
     }

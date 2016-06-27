@@ -15,6 +15,7 @@ namespace Trade_It_Now
         public Übersicht()
         {
             InitializeComponent();
+            this.Visible = true;
         }
     }
 }

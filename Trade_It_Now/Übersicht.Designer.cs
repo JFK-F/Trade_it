@@ -39,7 +39,7 @@
             this.labelWilkommen.AutoSize = true;
             this.labelWilkommen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWilkommen.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.labelWilkommen.Location = new System.Drawing.Point(64, 86);
+            this.labelWilkommen.Location = new System.Drawing.Point(60, 39);
             this.labelWilkommen.Name = "labelWilkommen";
             this.labelWilkommen.Size = new System.Drawing.Size(168, 20);
             this.labelWilkommen.TabIndex = 14;
@@ -48,14 +48,14 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(68, 124);
+            this.dataGridView1.Location = new System.Drawing.Point(64, 77);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(849, 436);
             this.dataGridView1.TabIndex = 15;
             // 
             // buttonAngebotAnnehmen
             // 
-            this.buttonAngebotAnnehmen.Location = new System.Drawing.Point(793, 580);
+            this.buttonAngebotAnnehmen.Location = new System.Drawing.Point(789, 533);
             this.buttonAngebotAnnehmen.Name = "buttonAngebotAnnehmen";
             this.buttonAngebotAnnehmen.Size = new System.Drawing.Size(124, 23);
             this.buttonAngebotAnnehmen.TabIndex = 16;
@@ -73,6 +73,7 @@
             this.Controls.Add(this.labelWilkommen);
             this.Name = "Übersicht";
             this.Text = "Übersicht";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
