@@ -18,12 +18,19 @@ namespace Trade_It_Now
             this.Visible = true;
             Initialize();
         }
-
+        public  Vorschau(String s):this()
+        {
+            try {
+                Image image = Image.FromFile(s);
+                pictureBox1.Image = image;
+            }catch(Exception e)
+            {
+                MessageBox.Show("Bild-Pfad nicht korreckt");
+                 
+            }
+        }
         private void Initialize()
         {
-            //funktioniert noch nicht ganz wird nur nen roten X angezeigt
-            pictureBox1.ImageLocation= "H:\ball.jpg";
-            pictureBox1.Show();
         }
     }
 }

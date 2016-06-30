@@ -49,7 +49,7 @@ namespace Trade_It_Now
 
         private void buttonVoraschau_Click(object sender, EventArgs e)
         {
-            Vorschau v1 = new Vorschau();
+            Vorschau v1 = new Vorschau(textBoxBildLink.Text);
             v1.MdiParent = main;
         }
     }
