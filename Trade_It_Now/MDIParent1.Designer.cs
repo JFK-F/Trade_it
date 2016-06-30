@@ -35,6 +35,7 @@ namespace Trade_It_Now
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.artikelAnlegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anfragenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alleVerfügbarenArtikelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +43,8 @@ namespace Trade_It_Now
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.artikelAnlegenToolStripMenuItem,
-            this.anfragenToolStripMenuItem});
+            this.anfragenToolStripMenuItem,
+            this.alleVerfügbarenArtikelToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(988, 24);
@@ -65,6 +67,12 @@ namespace Trade_It_Now
             this.anfragenToolStripMenuItem.Text = "Anfragen";
             this.anfragenToolStripMenuItem.Click += new System.EventHandler(this.anfragenToolStripMenuItem_Click);
             // 
+            // alleVerfügbarenArtikelToolStripMenuItem
+            // 
+            this.alleVerfügbarenArtikelToolStripMenuItem.Name = "alleVerfügbarenArtikelToolStripMenuItem";
+            this.alleVerfügbarenArtikelToolStripMenuItem.Size = new System.Drawing.Size(141, 20);
+            this.alleVerfügbarenArtikelToolStripMenuItem.Text = "alle verfügbaren Artikel";
+            // 
             // MDIParent1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -86,6 +94,7 @@ namespace Trade_It_Now
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem artikelAnlegenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anfragenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alleVerfügbarenArtikelToolStripMenuItem;
     }
 }
 
