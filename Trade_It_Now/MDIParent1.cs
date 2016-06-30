@@ -23,6 +23,7 @@ namespace Trade_It_Now
         {
             artikelAnlegenToolStripMenuItem.Enabled = true;
             anfragenToolStripMenuItem.Enabled = true;
+            alleVerfügbarenArtikelToolStripMenuItem.Enabled = true;
         }
 
         private void MDIParent1_Load(object sender, EventArgs e)
@@ -42,6 +43,11 @@ namespace Trade_It_Now
            Übersicht üs = new Übersicht();
            üs.MdiParent = this;
         }
-        
+
+        private void alleVerfügbarenArtikelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GegenstandMarkt gm = new GegenstandMarkt();
+            gm.MdiParent = this;
+        }
     }
 }

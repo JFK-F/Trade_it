@@ -29,9 +29,9 @@ namespace Trade_It_Now
         }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            //main.verbunden();
-            //this.Dispose();
-            kunden = dto.GetAlleKunden();
+            main.verbunden();
+            this.Dispose();
+           /* kunden = dto.GetAlleKunden();
             Kunde k = new Kunde(textBoxName.Text, textBoxPW.Text);
             int index = kunden.IndexOf(k);
             if (kunden[index].Passwort.Equals(textBoxPW.Text))
@@ -40,7 +40,7 @@ namespace Trade_It_Now
                 this.Dispose();
             }
             else MessageBox.Show("Falsches Passwort");
-            
+            */
         }
         
         private void buttonRegistrieren_Click(object sender, EventArgs e)

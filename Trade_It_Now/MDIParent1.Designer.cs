@@ -69,9 +69,11 @@ namespace Trade_It_Now
             // 
             // alleVerfügbarenArtikelToolStripMenuItem
             // 
+            this.alleVerfügbarenArtikelToolStripMenuItem.Enabled = false;
             this.alleVerfügbarenArtikelToolStripMenuItem.Name = "alleVerfügbarenArtikelToolStripMenuItem";
             this.alleVerfügbarenArtikelToolStripMenuItem.Size = new System.Drawing.Size(141, 20);
             this.alleVerfügbarenArtikelToolStripMenuItem.Text = "alle verfügbaren Artikel";
+            this.alleVerfügbarenArtikelToolStripMenuItem.Click += new System.EventHandler(this.alleVerfügbarenArtikelToolStripMenuItem_Click);
             // 
             // MDIParent1
             // 

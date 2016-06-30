@@ -53,6 +53,12 @@
     <Compile Include="Artikelanlegen.Designer.cs">
       <DependentUpon>Artikelanlegen.cs</DependentUpon>
     </Compile>
+    <Compile Include="GegenstandMarkt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GegenstandMarkt.Designer.cs">
+      <DependentUpon>GegenstandMarkt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vorschau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </Compile>
     <EmbeddedResource Include="Artikelanlegen.resx">
       <DependentUpon>Artikelanlegen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GegenstandMarkt.resx">
+      <DependentUpon>GegenstandMarkt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vorschau.resx">
       <DependentUpon>Vorschau.cs</DependentUpon>
