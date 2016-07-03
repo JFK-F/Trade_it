@@ -17,5 +17,15 @@ namespace Trade_It_Now
             InitializeComponent();
             this.Visible = true;
         }
+
+        private void dataGridView1_CellStyleChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            buttonAngebotAnfrage.Enabled = true;
+        }
+
+        private void buttonAngebotAnnehmen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

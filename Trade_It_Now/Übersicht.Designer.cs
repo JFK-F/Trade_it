@@ -30,7 +30,7 @@
         {
             this.labelWilkommen = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonAngebotAnnehmen = new System.Windows.Forms.Button();
+            this.buttonAngebotAnfrage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,16 +52,18 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(849, 436);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellStyleChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellStyleChanged);
             // 
-            // buttonAngebotAnnehmen
+            // buttonAngebotAnfrage
             // 
-            this.buttonAngebotAnnehmen.Enabled = false;
-            this.buttonAngebotAnnehmen.Location = new System.Drawing.Point(789, 533);
-            this.buttonAngebotAnnehmen.Name = "buttonAngebotAnnehmen";
-            this.buttonAngebotAnnehmen.Size = new System.Drawing.Size(124, 23);
-            this.buttonAngebotAnnehmen.TabIndex = 16;
-            this.buttonAngebotAnnehmen.Text = "Angebot annehmen";
-            this.buttonAngebotAnnehmen.UseVisualStyleBackColor = true;
+            this.buttonAngebotAnfrage.Enabled = false;
+            this.buttonAngebotAnfrage.Location = new System.Drawing.Point(789, 533);
+            this.buttonAngebotAnfrage.Name = "buttonAngebotAnfrage";
+            this.buttonAngebotAnfrage.Size = new System.Drawing.Size(124, 23);
+            this.buttonAngebotAnfrage.TabIndex = 16;
+            this.buttonAngebotAnfrage.Text = "Anfrage annehmen";
+            this.buttonAngebotAnfrage.UseVisualStyleBackColor = true;
+            this.buttonAngebotAnfrage.Click += new System.EventHandler(this.buttonAngebotAnnehmen_Click);
             // 
             // Übersicht
             // 
@@ -69,7 +71,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(988, 632);
-            this.Controls.Add(this.buttonAngebotAnnehmen);
+            this.Controls.Add(this.buttonAngebotAnfrage);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.labelWilkommen);
             this.Name = "Übersicht";
@@ -85,6 +87,6 @@
 
         private System.Windows.Forms.Label labelWilkommen;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button buttonAngebotAnnehmen;
+        private System.Windows.Forms.Button buttonAngebotAnfrage;
     }
 }
