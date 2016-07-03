@@ -19,19 +19,6 @@ namespace DatenDLL
             con = new OleDbConnection(bld.ConnectionString);
 
         }
-        public bool DeleteKunde(Kunde k)
-        {
-            if (openConnection())
-            {
-                OleDbCommand cmd = con.CreateCommand();
-                cmd.CommandText = "DELETE * FROM Kunde WHERE Benutzername = " + k.Benutzername;
-                cmd.ExecuteNonQuery();
-
-                return true;
-            }
-
-            return false;
-        }
 
         public List<Kunde> GetAlleKunden()
         {
