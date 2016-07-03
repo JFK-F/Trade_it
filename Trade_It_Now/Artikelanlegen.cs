@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DatenDLL;
+using KlassenDLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,10 +43,19 @@ namespace Trade_It_Now
             if (result == DialogResult.OK)
             {
                 //code for Ok
+                Gegenstand g= new Gegenstand(textBox1.Text, textBox2.Text, textBoxBildLink.Text);
+                neuerGegenstand(g);
                 this.Dispose();
                 MessageBox.Show("Artikel ist nun Online!");
             }
             
+        }
+
+        private void neuerGegenstand(Gegenstand g)
+        {
+            Gegenstand.AlleGegenstände.Add(g);
+            DTO dto = new DTO();
+            dto.InsertGegenstand(g);
         }
 
         private void buttonVoraschau_Click(object sender, EventArgs e)

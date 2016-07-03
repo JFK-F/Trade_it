@@ -8,17 +8,16 @@ namespace KlassenDLL
 {
     public class Kunde
     {
-        int kunden_ID;
-        String benutzername;
-        String vorname;
-        String nachname;
-        String straße;
-        String plz;
-        String ort;
-        String passwort;
-        String eMail;
-        List<Kunde> allekunden;
-        List<Gegenstand> sachen;
+        private int kunden_ID;
+        private String benutzername;
+        private String vorname;
+        private String nachname;
+        private String straße;
+        private String plz;
+        private String ort;
+        private String passwort;
+        private String eMail;
+        private List<Kunde> allekunden;
         private string text1;
         private string text2;
         private string text3;
@@ -94,7 +93,7 @@ namespace KlassenDLL
             this.Passwort = text2;
         }
 
-        public List<Kunde> getAllekunden()
+        public  List<Kunde> getAllekunden()
         {
             return allekunden;
         }
@@ -102,6 +101,6 @@ namespace KlassenDLL
         {
             this.allekunden = list;
         }
-
+       
     }
 }

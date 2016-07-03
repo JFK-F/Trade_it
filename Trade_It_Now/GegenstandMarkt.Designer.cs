@@ -41,6 +41,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(849, 436);
             this.dataGridView1.TabIndex = 21;
+            this.dataGridView1.CellStateChanged += new System.Windows.Forms.DataGridViewCellStateChangedEventHandler(this.dataGridView1_CellStateChanged);
             // 
             // labelWilkommen
             // 
@@ -62,6 +63,7 @@
             this.buttonAngebotAnnehmen.TabIndex = 23;
             this.buttonAngebotAnnehmen.Text = "Angebot anfragen";
             this.buttonAngebotAnnehmen.UseVisualStyleBackColor = true;
+            this.buttonAngebotAnnehmen.Click += new System.EventHandler(this.buttonAngebotAnnehmen_Click);
             // 
             // GegenstandMarkt
             // 

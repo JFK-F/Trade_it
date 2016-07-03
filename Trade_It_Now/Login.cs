@@ -20,28 +20,75 @@ namespace Trade_It_Now
         public Login()
         {
             InitializeComponent();
+            Initialize();
             dto = new DTO();
             this.Visible = true;
         }
+
+        private void Initialize()
+        {
+            textBoxPW.MaxLength = 8;
+            textBoxPW.PasswordChar = '•';
+            textBoxPW.CharacterCasing = CharacterCasing.Lower;
+        }
+
         public Login(MDIParent1 main):this()
         {
             this.main = main;
         }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            main.verbunden();
-            this.Dispose();
-           /* kunden = dto.GetAlleKunden();
-            Kunde k = new Kunde(textBoxName.Text, textBoxPW.Text);
-            int index = kunden.IndexOf(k);
-            if (kunden[index].Passwort.Equals(textBoxPW.Text))
+            //main.verbunden();
+            //this.Dispose();
+            kunden = dto.GetAlleKunden();
+
+            try
             {
-                main.verbunden();
-                this.Dispose();
+                int i = 0;
+                while (true)
+                {
+                    if (kunden[i].Benutzername.Equals(textBoxName.Text))
+                    {
+
+                        if (kunden[i].Passwort.Equals(textBoxPW.Text))
+                        {
+                            break;
+                            main.verbunden();
+                            this.Dispose();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Falsches Passwort");
+                            DialogResult result = MessageBox.Show("Falsches Passwort", "Warning",
+                            MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                            if (result == DialogResult.Retry)
+                            {
+                                textBoxPW.Clear();
+                            }
+                            else
+                            {
+                                textBoxName.Clear();
+                                textBoxPW.Clear();
+                            }
+                        }
+                    }
+                    else i++;
+
+               }
+                 
             }
-            else MessageBox.Show("Falsches Passwort");
-            */
-        }
+            catch(Exception)
+            {
+                DialogResult result = MessageBox.Show("Benutzer nicht vorhanden zur Registrierung?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(result == DialogResult.Yes)
+                {
+                    Registrieren r1 = new Registrieren();
+                    r1.MdiParent = main;
+                    this.Dispose();
+                }
+            }
+         }
         
         private void buttonRegistrieren_Click(object sender, EventArgs e)
         {

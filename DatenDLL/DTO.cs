@@ -15,7 +15,8 @@ namespace DatenDLL
         {
             OleDbConnectionStringBuilder bld = new OleDbConnectionStringBuilder();
             bld.Provider = "Microsoft.ACE.OLEDB.12.0";
-            bld.DataSource = "H:\\2.jahr\\C#\\Trade_It_Now\\Tauschportal.accsb";
+            bld.DataSource = "C:\\Users\\Jonas\\Desktop";
+            //bld.DataSource = "H:\\2.jahr\\C#\\Trade_It_Now\\Tauschportal.accsb";
             con = new OleDbConnection(bld.ConnectionString);
 
         }
@@ -27,7 +28,7 @@ namespace DatenDLL
             {
                 //Code Tabelle auslesen und LIST<> füllen
                 OleDbCommand cmd = con.CreateCommand();
-                cmd.CommandText = "select * from Kunden";
+                cmd.CommandText = "Select * from Benutzer";
                 OleDbDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
@@ -68,6 +69,60 @@ namespace DatenDLL
             cmd.Parameters.AddWithValue("plz", Convert.ToInt32(kunde.Plz));
             cmd.Parameters.AddWithValue("ort", kunde.Ort);
             cmd.CommandText = "Insert into Kunden values(id,bnam,vor,nach,str,plz,ort,pw,mail)";
+            openConnection();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                result = false;
+            }
+            return result;
+        }
+
+
+        public List<Gegenstand> GetAlleGegenstände()
+        {
+            List<Gegenstand> lgeg = new List<Gegenstand>();
+            if (openConnection())
+            {
+                //Code Tabelle auslesen und LIST<> füllen
+                OleDbCommand cmd = con.CreateCommand();
+                cmd.CommandText = "select * from Artikel";
+                OleDbDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Gegenstand geg = mkGegenstand(reader);
+                    lgeg.Add(geg);
+                }
+            }
+            return lgeg;
+        }
+
+        private Gegenstand mkGegenstand(OleDbDataReader reader)
+        {
+            Gegenstand geg = new Gegenstand();
+            int i = 0;
+            geg.Id = reader.GetInt32(i++);
+            geg.Benuz_Id = reader.GetInt32(i++);
+            geg.Bezeichnung = reader.GetString(i++);
+            geg.Beschreibung = reader.GetString(i++);
+            geg.Link = reader.GetString(i++);
+            return geg;
+        }
+
+        public bool InsertGegenstand(Gegenstand geg)
+        {
+            Boolean result = true;
+            OleDbCommand cmd = con.CreateCommand();
+            cmd.Parameters.AddWithValue("id", Convert.ToInt32(geg.Id));
+            cmd.Parameters.AddWithValue("bnz_id", geg.Benuz_Id);
+            cmd.Parameters.AddWithValue("bez", geg.Bezeichnung);
+            cmd.Parameters.AddWithValue("besch", geg.Beschreibung);
+            cmd.Parameters.AddWithValue("link", geg.Link);
+            
+            cmd.CommandText = "Insert into Artikel values(id,bnz_id,bez,besch,link)";
             openConnection();
             try
             {
