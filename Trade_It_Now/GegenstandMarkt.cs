@@ -33,6 +33,7 @@ namespace Trade_It_Now
         private void buttonAngebotAnnehmen_Click(object sender, EventArgs e)
         {
             
+            //dataGridView1.SelectedRows. Unfertiger Projektteil
             //Item in gegenstand casten 
             //und anfrage an den anbieter senden 
             //hinzufügen bei angebotenen artikeln (sicht vom anbieter des Artikels)

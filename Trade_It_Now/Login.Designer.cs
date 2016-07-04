@@ -36,6 +36,8 @@
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonRegistrieren = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelWilkommen
@@ -101,12 +103,22 @@
             this.buttonRegistrieren.UseVisualStyleBackColor = true;
             this.buttonRegistrieren.Click += new System.EventHandler(this.buttonRegistrieren_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Trade_It_Now.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(489, 64);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(235, 116);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(988, 632);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonRegistrieren);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.labelWilkommen);
@@ -118,6 +130,7 @@
             this.Name = "Login";
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +145,6 @@
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Button buttonRegistrieren;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
