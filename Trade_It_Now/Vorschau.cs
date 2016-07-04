@@ -18,8 +18,10 @@ namespace Trade_It_Now
             this.Visible = true;
             Initialize();
         }
-        public  Vorschau(String s):this()
+        public  Vorschau(String s,String t1,String t2):this()
         {
+            textBox1.Text = t1;
+            textBox2.Text = t2;
             try {
                 Image image = Image.FromFile(s);
                 pictureBox1.Image = image;

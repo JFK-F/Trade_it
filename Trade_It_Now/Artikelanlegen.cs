@@ -60,7 +60,7 @@ namespace Trade_It_Now
 
         private void buttonVoraschau_Click(object sender, EventArgs e)
         {
-            Vorschau v1 = new Vorschau(textBoxBildLink.Text);
+            Vorschau v1 = new Vorschau(textBoxBildLink.Text,textBox1.Text,textBox2.Text);
             v1.MdiParent = main;
         }
     }
