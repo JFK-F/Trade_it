@@ -75,6 +75,7 @@ namespace Trade_It_Now
             // schauen ob bereits in der liste 
             if (textBoxBenutzername.Text=="")
             {
+                
                 prüfstatus = false;
                 textBoxBenutzername.ForeColor = Color.Red;
                 labelVergeben.ForeColor = Color.Red;
