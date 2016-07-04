@@ -18,7 +18,7 @@ namespace DatenDLL
             //bld.DataSource = "C:\\Users\\Jonas\\Desktop";
             bld.DataSource = "H:\\2.jahr\\C#\\Trade_It_Now\\Tauschportal.accsb";
             con = new OleDbConnection(bld.ConnectionString);
-
+            //Test
         }
 
         public List<Kunde> GetAlleKunden()
