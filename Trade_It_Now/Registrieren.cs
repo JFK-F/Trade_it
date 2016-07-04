@@ -37,7 +37,7 @@ namespace Trade_It_Now
 
         private void buttonBnprüfen_Click(object sender, EventArgs e)
         {
-            prüfenStatus();            
+           // prüfenStatus();            Auskommentiert wegen fehlender Übergabeparameter
         }
 
         private void buttonFertigstellen_Click(object sender, EventArgs e)
@@ -81,9 +81,11 @@ namespace Trade_It_Now
                 labelVergeben.ForeColor = Color.Red;
                 labelVergeben.Text = "Bitte Benutzernamen eingeben!";
             }
-            else
-            foreach (k in dto.GetAlleKunden()) //nicht korrekt
+            else if (textBoxBenutzername.Text == "")//Prüfung, ob Name vorhanden & Bedingung nicht richtig (nur zum Test des folgenden Ablaufs)
             {
+
+            //foreach (k in dto.GetAlleKunden()) //nicht korrekt
+            //{
                 //!ok
                 prüfstatus = false;
                 textBoxBenutzername.ForeColor = Color.Red;

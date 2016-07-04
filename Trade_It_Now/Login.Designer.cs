@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.labelWilkommen = new System.Windows.Forms.Label();
             this.labelPw = new System.Windows.Forms.Label();
             this.LabelKundennummer = new System.Windows.Forms.Label();
@@ -113,6 +114,7 @@
             this.Controls.Add(this.LabelKundennummer);
             this.Controls.Add(this.textBoxPW);
             this.Controls.Add(this.textBoxName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

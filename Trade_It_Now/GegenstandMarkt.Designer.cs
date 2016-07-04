@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GegenstandMarkt));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelWilkommen = new System.Windows.Forms.Label();
             this.buttonAngebotAnnehmen = new System.Windows.Forms.Button();
@@ -74,6 +75,7 @@
             this.Controls.Add(this.buttonAngebotAnnehmen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.labelWilkommen);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GegenstandMarkt";
             this.Text = "GegenstandMarkt";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

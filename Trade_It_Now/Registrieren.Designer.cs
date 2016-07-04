@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrieren));
             this.labelinfotext = new System.Windows.Forms.Label();
             this.labelBenutzername = new System.Windows.Forms.Label();
             this.labelVorname = new System.Windows.Forms.Label();
@@ -280,6 +281,7 @@
             this.Controls.Add(this.groupBoxPersoinendaten);
             this.Controls.Add(this.groupBoxAnmeldedaten);
             this.Controls.Add(this.labelinfotext);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registrieren";
             this.Text = "Registrieren";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

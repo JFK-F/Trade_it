@@ -32,6 +32,7 @@ namespace Trade_It_Now
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIParent1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.artikelAnlegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anfragenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,6 +82,7 @@ namespace Trade_It_Now
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(988, 632);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "MDIParent1";
             this.Text = "MDIParent1";
