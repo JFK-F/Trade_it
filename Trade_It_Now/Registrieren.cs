@@ -1,4 +1,5 @@
-﻿using KlassenDLL;
+﻿using DatenDLL;
+using KlassenDLL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace Trade_It_Now
 {
     public partial class Registrieren : Form
     {
+        DTO dto = new DTO();
+        MDIParent1 main;
         private List<Kunde> neueKunden;
         private Boolean prüfstatus = false;
         public Registrieren()
@@ -27,6 +30,10 @@ namespace Trade_It_Now
             textBoxPw.PasswordChar = '•';
             textBoxPw.CharacterCasing = CharacterCasing.Lower;
         }
+        public Registrieren(MDIParent1 main):this()
+        {
+            this.main = main;
+        }
 
         private void buttonBnprüfen_Click(object sender, EventArgs e)
         {
@@ -35,10 +42,7 @@ namespace Trade_It_Now
 
         private void buttonFertigstellen_Click(object sender, EventArgs e)
         {
-            prüfenStatus();
-            if (prüfstatus == true)
-            {
-                Kunde k = new Kunde(
+            Kunde k = new Kunde(
                     textBoxBenutzername.Text,
                     textBoxPw.Text,
                     textBoxMail.Text,
@@ -46,9 +50,16 @@ namespace Trade_It_Now
                     textBoxNachname.Text,
                     textBoxOrt.Text,
                     textBoxPlz.Text,
-                    textBoxStraße.Text                    
+                    textBoxStraße.Text
                     );
+
+            prüfenStatus(k);
+            if (prüfstatus == true)
+            {
                 neueKunden.Add(k);
+                main.verbunden();
+                this.Dispose();
+                
 
                 //k.setAllekunden(neueKunden);
 
@@ -59,7 +70,7 @@ namespace Trade_It_Now
             }            
         }
 
-        private void prüfenStatus()
+        private void prüfenStatus(Kunde k )
         {
             // schauen ob bereits in der liste 
             if (textBoxBenutzername.Text=="")
@@ -69,7 +80,8 @@ namespace Trade_It_Now
                 labelVergeben.ForeColor = Color.Red;
                 labelVergeben.Text = "Bitte Benutzernamen eingeben!";
             }
-            else if (textBoxBenutzername.Text == "asd")//nicht korrekt
+            else
+            foreach (k in dto.GetAlleKunden()) //nicht korrekt
             {
                 //!ok
                 prüfstatus = false;
@@ -82,6 +94,7 @@ namespace Trade_It_Now
             {
                 //ok
                 textBoxBenutzername.ForeColor = Color.Green;
+                prüfstatus = true;
                 
             }
         }

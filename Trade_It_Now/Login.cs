@@ -38,9 +38,9 @@ namespace Trade_It_Now
         }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            main.verbunden();
-            this.Dispose();
-            /*kunden = dto.GetAlleKunden();
+            //main.verbunden();
+            //this.Dispose();
+            kunden = dto.GetAlleKunden();
 
             try
             {
@@ -52,9 +52,9 @@ namespace Trade_It_Now
 
                         if (kunden[i].Passwort.Equals(textBoxPW.Text))
                         {
-                            break;
                             main.verbunden();
                             this.Dispose();
+                            break;
                         }
                         else
                         {
@@ -64,21 +64,29 @@ namespace Trade_It_Now
                             if (result == DialogResult.Retry)
                             {
                                 textBoxPW.Clear();
+                                break;
                             }
                             else
                             {
                                 textBoxName.Clear();
                                 textBoxPW.Clear();
+                                break;
                             }
                         }
+                        
                     }
-                    else i++;
-                    
+                    if (i <= kunden.Count)
+                    {
+                        i++;
+                    }
+                    else break;
 
+
+                 
                }
                  
             }
-            catch(Exception)
+            catch(Exception )
             {
                 DialogResult result = MessageBox.Show("Benutzer nicht vorhanden zur Registrierung?", "Warning",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -88,12 +96,12 @@ namespace Trade_It_Now
                     r1.MdiParent = main;
                     this.Dispose();
                 }
-            }*/
+            } //
          }
         
         private void buttonRegistrieren_Click(object sender, EventArgs e)
         {
-           Registrieren r1 =  new Registrieren();
+           Registrieren r1 =  new Registrieren(main);
            r1.MdiParent = main;
 
         }
