@@ -12,8 +12,10 @@ using System.Windows.Forms;
 
 namespace Trade_It_Now
 {
+    
     public partial class Artikelanlegen : Form
     {
+        Gegenstand geg;
         MDIParent1 main;
         public Artikelanlegen()
         {
@@ -55,12 +57,13 @@ namespace Trade_It_Now
         {
             Gegenstand.AlleGegenstände.Add(g);
             DTO dto = new DTO();
+            geg = g;
             dto.InsertGegenstand(g);
         }
 
         private void buttonVoraschau_Click(object sender, EventArgs e)
         {
-            Vorschau v1 = new Vorschau(textBoxBildLink.Text,textBox1.Text,textBox2.Text);
+            Vorschau v1 = new Vorschau(textBoxBildLink.Text,textBox1.Text,textBox2.Text,geg);
             v1.MdiParent = main;
         }
     }

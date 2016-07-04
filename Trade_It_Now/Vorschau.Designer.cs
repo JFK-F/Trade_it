@@ -84,6 +84,7 @@
             this.buttonAbbrechen.TabIndex = 13;
             this.buttonAbbrechen.Text = "Abbrechen";
             this.buttonAbbrechen.UseVisualStyleBackColor = true;
+            this.buttonAbbrechen.Click += new System.EventHandler(this.buttonAbbrechen_Click);
             // 
             // label3
             // 
@@ -124,6 +125,7 @@
             this.buttonAngebot.TabIndex = 14;
             this.buttonAngebot.Text = "Gegenstand anbieten";
             this.buttonAngebot.UseVisualStyleBackColor = true;
+            this.buttonAngebot.Click += new System.EventHandler(this.buttonAngebot_Click);
             // 
             // label4
             // 
